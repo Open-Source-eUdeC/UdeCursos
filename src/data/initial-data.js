@@ -1,4 +1,4 @@
-/* Format of the data:
+/* Data format:
   ramos: {
     'id': { id: 'id', content: 'NAME', color: '#FFFFFF', credits: 0, code: 'courseCode', prerequisites: [] }
 */
@@ -15,7 +15,7 @@ const initialData = {
       'task-7': { id: 'task-7', content: 'Álgebra II', color: "#FFD300", credits: "5", code: "525150", prerequisites: ['525140'] },
       'task-8': { id: 'task-8', content: 'Cálculo II', color: "#FFD300", credits: "5", code: "527150", prerequisites: ['527140'] },
       'task-9': { id: 'task-9', content: 'Intro. Desarrollo Soluciones Inf.', color: "#FFD300", credits: "3", code: "503152", prerequisites: [] },
-      'task-10': { id: 'task-10', content: 'Intro. Innovación Ingeniería', color: "#FFD300", credits: "2", code: "500151", prerequisites: ['503120'] },
+      'task-10': { id: 'task-10', content: 'Intro. Innovación Ingeniería', color: "#FFD300", credits: "2", code: "500151", prerequisites: [] },
 
       'task-11': { id: 'task-11', content: 'Lógica', color: "#FFD300", credits: "4", code: "503207", prerequisites: [] },
       'task-12': { id: 'task-12', content: 'Ecuaciones Diferenciales Ordinarias', color: "#FFD300", credits: "4", code: "521218", prerequisites: ['525150', '527150'] },
@@ -28,9 +28,9 @@ const initialData = {
       'task-18': { id: 'task-18', content: 'Programación II', color: "#FFD300", credits: "4", code: "503212", prerequisites: ['503208'] },
       'task-19': { id: 'task-19', content: 'Complementaria I', color: "#FFD300", credits: "3", code: "201", prerequisites: [] },
 
-      'task-20': { id: 'task-20', content: 'Estadística', color: "#FFD300", credits: "4", code: "523210", prerequisites: [] },
-      'task-21': { id: 'task-21', content: 'Mecánica y Termodinámica', color: "#FFD300", credits: "5", code: "541341", prerequisites: [] },
-      'task-22': { id: 'task-22', content: 'Estructura de Datos', color: "#FFD300", credits: "4", code: "503220", prerequisites: [] },
+      'task-20': { id: 'task-20', content: 'Estadística', color: "#FFD300", credits: "4", code: "523210", prerequisites: ['525140', '527150'] },
+      'task-21': { id: 'task-21', content: 'Mecánica y Termodinámica', color: "#FFD300", credits: "5", code: "541341", prerequisites: ['531140', '510150', '521227'] },
+      'task-22': { id: 'task-22', content: 'Estructura de Datos', color: "#FFD300", credits: "4", code: "503220", prerequisites: ['503208'] },
       'task-23': { id: 'task-23', content: 'Electiva I', color: "#FFD300", credits: "3", code: "101", prerequisites: [] },
       'task-24': { id: 'task-24', content: 'Complementaria II', color: "#FFD300", credits: "3", code: "202", prerequisites: [] },
 
@@ -72,67 +72,77 @@ const initialData = {
         id: 'column-1',
         title: 'I',
         taskIds: ['task-1', 'task-2', 'task-3', 'task-4', 'task-5'],
+        credits: '',
       },
       'column-2': {
         id: 'column-2',
         title: 'II',
         taskIds: ['task-6', 'task-7', 'task-8', 'task-9', 'task-10'],
+        credits: '',
       },
       'column-3': {
         id: 'column-3',
         title: 'III',
         taskIds: ['task-11', 'task-12', 'task-13', 'task-14'],
+        credits: '',
       },
       'column-4': {
         id: 'column-4',
         title: 'IV',
         taskIds: ['task-15', 'task-16', 'task-17', 'task-18', 'task-19'],
+        credits: '',
       },
       'column-5': {
         id: 'column-5',
         title: 'V',
         taskIds: ['task-20', 'task-21', 'task-22', 'task-23', 'task-24'],
+        credits: '',
       },
       'column-6': {
         id: 'column-6',
         title: 'VI',
         taskIds: ['task-25', 'task-26', 'task-27', 'task-28', 'task-29'],
+        credits: '',
       },
       'column-7': {
         id: 'column-7',
         title: 'VII',
         taskIds: ['task-30', 'task-31', 'task-32', 'task-33', 'task-34'],
+        credits: '',
       },
       'column-8': {
         id: 'column-8',
         title: 'VIII',
         taskIds: ['task-35', 'task-36', 'task-37', 'task-38', 'task-39'],
+        credits: '',
       },
       'column-9': {
         id: 'column-9',
         title: 'IX',
         taskIds: ['task-40', 'task-41', 'task-42', 'task-43', 'task-44'],
+        credits: '',
       },
       'column-10': {
         id: 'column-10',
         title: 'X',
         taskIds: ['task-45', 'task-46', 'task-47', 'task-48'],
+        credits: '',
     },
     'column-11': {
         id: 'column-11',
         title: 'XI',
         taskIds: ['task-49', 'task-50'],
-      }
-    },
-    // Facilitate reordering of the columns
-    columnOrder: [
-        'column-1', 'column-2', 
-        'column-3', 'column-4',
-        'column-5', 'column-6',
-        'column-7', 'column-8',
-        'column-9', 'column-10',
-        'column-11'],
-  };
-  
-  export default initialData;
-  
+        credits: '',
+    }
+  },
+  // Facilitate reordering of the columns
+  columnOrder: [
+      'column-1', 'column-2', 
+      'column-3', 'column-4',
+      'column-5', 'column-6',
+      'column-7', 'column-8',
+      'column-9', 'column-10',
+      'column-11']
+};
+
+export default initialData;

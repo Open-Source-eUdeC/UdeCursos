@@ -17,11 +17,11 @@ const Container = styled.div`
   align-content: center;
   position: relative;
 
-  /* Center the grid item */
-  
-
   background-color: ${props => (props.isDragging ? '#FFD300' : "white")};
+  &:focus {
+    outline: 2.2px solid #4C2BEE;
 
+  }
 `;
 const Code = styled.div`
   font-family: "Suisse Int\'l Mono", monospace;
@@ -59,33 +59,22 @@ const Credits = styled.div`
   user-select: none;
 
 `;
-export default class Task extends React.Component {
-  render() {
-    return (
-      // Display the credits from the task
-      <Draggable draggableId={this.props.task.id} index={this.props.index}>
-        {(provided, snapshot) => (
-          <Container
-            {...provided.draggableProps}
-            {...provided.dragHandleProps}
-            ref={provided.innerRef}
-            isDragging={snapshot.isDragging}
-          >
-            <Code>
-              {this.props.task.code}
-            </Code>
 
-            <Content>
-              {this.props.task.content}
-            </Content>
-
-            <Credits>
-              {this.props.task.credits}
-            </Credits>
-
-          </Container>
-        )}
-      </Draggable>
-    );
-  }
+export default function Task(props) {
+  return (
+    <Draggable draggableId={props.task.id} index={props.index}>
+      {(provided, snapshot) => (
+        <Container
+          {...provided.draggableProps}
+          {...provided.dragHandleProps}
+          ref={provided.innerRef}
+          isDragging={snapshot.isDragging}
+        >
+          <Code>{props.task.code}</Code>
+          <Content>{props.task.content}</Content>
+          <Credits>{props.task.credits}</Credits>
+        </Container>
+      )}
+    </Draggable>
+  );
 }
