@@ -1,0 +1,25 @@
+{
+  "Departamentos": [
+    "FacultadDeIngeniería",
+    "IngenieriaCivil",
+    "IngenieriaElectrica",
+    "IngenieriaIndustrial",
+    "IngenieriaInformatica",
+    "IngenieriaDeMateriales",
+    "IngenieriaMecanica",
+    "IngenieriaMetalurgica",
+    "IngenieriaQuimica",
+    "OtrasFacultades"
+  ],
+  "FacultadDeIngenieria": [
+  ],
+  "IngenieriaCivil": [],
+  "IngenieriaElectrica": [],
+  "IngenieriaIndustrial": [],
+  "IngenieriaInformatica": [],
+  "IngenieriaDeMateriales": [],
+  "IngenieriaMecanica": [],
+  "IngenieriaMetalurgica": [],
+  "IngenieriaQuimica": [],
+  "OtrasFacultades": []
+}

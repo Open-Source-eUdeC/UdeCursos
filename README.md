@@ -32,6 +32,19 @@
 ![image](assets/banner.png)
 ---
 
+<div align="center">
+  <p>
+    <i>
+      <h4 href="https://www.mozilla.org/" target="_blank" rel="noopener noreferrer" style="font-family: cursive">
+        Optimized for the latest version of  
+        <img src="assets/firefox.png" alt="Firefox" width="16" height="16" />
+         but you can also use it in other browsers.
+      </h4>
+    </i>
+  </p>
+</div>
+
+
 > Check out the [beta here](https://udecursos.study/) or the **[latest build here!](http://build.udecursos.study/)** directly from the *dev branch*
 
 🎒 Visual designed platform, bringing a modern and intuitive way to the courses management, for and by the students of the [Universidad de Concepción](https://admision.udec.cl/). Students can drag & drop their courses, visualize schedules and manage their grades.
@@ -42,10 +55,9 @@
 > Check out the responsive design as well! 👀
 > Pre-release views 
 
-![image](assets/latest-build.png)
+![Inicio UdeCursos](assets/latest-build.png)
 
-![image](assets/malla.png)
-
+![Malla UdeCursos](assets/malla.gif)
 
 ## Getting started for devs!
 1. Fork or clone the repo and install node modules:
